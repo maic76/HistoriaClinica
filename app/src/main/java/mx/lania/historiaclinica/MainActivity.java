@@ -22,10 +22,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
-        //actionBar.hide();
-        //actionBar.setDisplayHomeAsUpEnabled(true);
-
-
 
     }
 
@@ -41,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickPato(View v){
         //Log.d(tag,"entre al clcik");
-        Intent iPato = new Intent("mx.lania.usingintent.FichaId");
+        Intent iPato = new Intent("mx.lania.usingintent.AntPatologicos");
         startActivityForResult(iPato,2);
     }
 
@@ -49,12 +45,18 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==1){
             if(resultCode == RESULT_OK){
-               // showMessage(data.getData().toString());
-               // showMessage(Integer.toString(data.getIntExtra("age3",0)));
                 showMessage("De vuelta al Menú desde Ficha");
             }
             if(resultCode == RESULT_CANCELED){
                 showMessage("No guardaste los datos de Ficha de Identificación");
+            }
+        }
+        if(requestCode==2){
+            if(resultCode == RESULT_OK){
+                showMessage("De vuelta al Menú desde Antecedentes Patológicos");
+            }
+            if(resultCode == RESULT_CANCELED){
+                showMessage("No guardaste los datos de Antecedentes Patológicos");
             }
         }
     }

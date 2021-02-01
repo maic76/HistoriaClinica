@@ -11,6 +11,9 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class FichaId extends AppCompatActivity {
@@ -42,8 +45,8 @@ public class FichaId extends AppCompatActivity {
     }
 
     public void onClickGuardar(View v){
-        Dialogo dialogFragment = Dialogo.newInstance(
-                "Are you sure you want to do this?");
+        Bundle datos = obtainValues();
+        Dialogo dialogFragment = Dialogo.newInstance("¿ Son correctos los datos capturados ?", datos,1);
         dialogFragment.show(getSupportFragmentManager(), "dialog");
     }
 
@@ -67,6 +70,37 @@ public class FichaId extends AppCompatActivity {
 
     public void showMessage(String message){
         Toast.makeText(getBaseContext(),message,Toast.LENGTH_SHORT).show();
+    }
+
+    public Bundle obtainValues(){
+
+      //  RadioGroup radioGroup = (RadioGroup)  findViewById(R.id.rdGp1);
+        RadioButton rb1 = (RadioButton) findViewById(R.id.rdb1);
+        RadioButton rb2 = (RadioButton) findViewById(R.id.rdb2);
+
+        String sexo;
+        if (rb1.isChecked()) {
+            sexo = "Masculino";
+        }
+        else if (rb2.isChecked()) {
+            sexo = "Femenino";
+        }else{
+            sexo = "Sin información";
+        }
+
+        Bundle extras = new Bundle();
+        extras.putString("nombre",((EditText) findViewById(R.id.txtNombre)).getText().toString());
+        extras.putString("apellido",((EditText)  findViewById(R.id.txtApellido)).getText().toString());
+        extras.putString("curp",((EditText)  findViewById(R.id.txtCurp)).getText().toString());
+        extras.putString("edad",((EditText) findViewById(R.id.txtEdad)).getText().toString());
+        extras.putString("peso",((EditText) findViewById(R.id.txtPeso)).getText().toString());
+        extras.putString("talla",((EditText) findViewById(R.id.txtTalla)).getText().toString());
+        extras.putString("altura",((EditText)  findViewById(R.id.txtAltura)).getText().toString());
+        extras.putString("ocupacion",((EditText)  findViewById(R.id.txtOcupacion)).getText().toString());
+        extras.putString("motivo",((EditText)  findViewById(R.id.txtMotivo)).getText().toString());
+        extras.putString("sexo",sexo);
+
+        return extras;
     }
 
 
