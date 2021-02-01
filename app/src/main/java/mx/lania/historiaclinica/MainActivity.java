@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,12 +29,37 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
-
-    public void onClick(View v){
-        //Log.d(tag,"entre al clcik");
-        startActivity(new Intent("mx.lania.usingintent.FichaId"));
+    public void showMessage(String message){
+        Toast.makeText(getBaseContext(),message,Toast.LENGTH_SHORT).show();
     }
+
+    public void onClickFicha(View v){
+        //Log.d(tag,"entre al clcik");
+        Intent iFicha = new Intent("mx.lania.usingintent.FichaId");
+        startActivityForResult(iFicha,1);
+    }
+
+    public void onClickPato(View v){
+        //Log.d(tag,"entre al clcik");
+        Intent iPato = new Intent("mx.lania.usingintent.FichaId");
+        startActivityForResult(iPato,2);
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode==1){
+            if(resultCode == RESULT_OK){
+               // showMessage(data.getData().toString());
+               // showMessage(Integer.toString(data.getIntExtra("age3",0)));
+                showMessage("De vuelta al Menú desde Ficha");
+            }
+            if(resultCode == RESULT_CANCELED){
+                showMessage("No guardaste los datos de Ficha de Identificación");
+            }
+        }
+    }
+
+
 
 
 }
