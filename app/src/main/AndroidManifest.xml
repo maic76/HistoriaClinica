@@ -9,13 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HistoriaClinica">
+        <activity android:name=".AntNoPatologicos">
+            <intent-filter>
+                <action android:name="mx.lania.usingintent.AntNoPatologicos" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".AntPatologicos">
             <intent-filter>
                 <action android:name="mx.lania.usingintent.AntPatologicos" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
         </activity>
         <activity android:name=".FichaId">
             <intent-filter>

@@ -41,6 +41,11 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(iPato,2);
     }
 
+    public void onClickNoPato(View v){
+        Intent iNoPato = new Intent("mx.lania.usingintent.AntNoPatologicos");
+        startActivityForResult(iNoPato,3);
+    }
+
     public void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==1){
@@ -57,6 +62,14 @@ public class MainActivity extends AppCompatActivity {
             }
             if(resultCode == RESULT_CANCELED){
                 showMessage("No guardaste los datos de Antecedentes Patológicos");
+            }
+        }
+        if(requestCode==3){
+            if(resultCode == RESULT_OK){
+                showMessage("De vuelta al Menú desde Antecedentes No Patológicos");
+            }
+            if(resultCode == RESULT_CANCELED){
+                showMessage("No guardaste los datos de Antecedentes No Patológicos");
             }
         }
     }

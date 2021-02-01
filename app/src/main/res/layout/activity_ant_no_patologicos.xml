@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android ="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:titleTextColor="@android:color/white"
+        app:title="Antecedentes Patológicos"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="((se anotará aquí lo relacionado a tabaquismo, uso de alcohol, así como diferentes adicciones y su duración, de igual forma se anotarán aquí, de requerirse, los antecedentes sexuales del paciente)"/>
+
+    <EditText
+        android:id="@+id/txtAlcohol"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Alcohol"/>
+    <EditText
+        android:id="@+id/txtTabaquismo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tabaquismo"/>
+    <EditText
+        android:id="@+id/txtDrogas"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Drogas"/>
+    <EditText
+        android:id="@+id/txtInmunizaciones"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Inmunizaciones"/>
+    <EditText
+        android:id="@+id/txtOtros"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Otros"/>
+
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancelar"
+        android:onClick="onClickCancelar"
+        />
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        android:onClick="onClickGuardar"
+        />
+
+</LinearLayout>
