@@ -12,7 +12,7 @@
         android:minHeight="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         app:titleTextColor="@android:color/white"
-        app:title="Antecedentes Familiares"/>
+        app:title="Antecedentes Ginecoobstétricos"/>
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -25,106 +25,114 @@
             android:focusable="true"
             android:focusableInTouchMode="true" >
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Padre vivo: "/>
-<RadioGroup
-    android:id="@+id/rdGpPadre"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-
-    <RadioButton
-        android:id="@+id/rdbPadre1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Si"/>
-
-    <RadioButton
-        android:id="@+id/rdbPadre2"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="No"/>
-</RadioGroup>
-
     <EditText
-        android:id="@+id/txtEnfPadre"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enfermedades que padece"/>
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Madre viva: "/>
-    <RadioGroup
-        android:id="@+id/rdGpMadre"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/rdbMadre1"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Si"/>
-
-        <RadioButton
-            android:id="@+id/rdbMadre2"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="No"/>
-    </RadioGroup>
-
-    <EditText
-        android:id="@+id/txtEnfMadre"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enfermedades que padece"/>
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Hermanos: "/>
-    <EditText
-        android:id="@+id/txtCuantos"
+        android:id="@+id/txtMenarquia"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:hint="¿Cuántos?"/>
+        android:hint="Menarquía"/>
+    <EditText
+        android:id="@+id/txtRitmo"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:hint="Ritmo"/>
+    <EditText
+        android:id="@+id/txtFUM"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:hint="F.U.M."/>
+    <EditText
+        android:id="@+id/txtG"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:hint="G"/>
+    <EditText
+        android:id="@+id/txtP"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:hint="P"/>
+    <EditText
+        android:id="@+id/txtA"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:hint="C"/>
+    <EditText
+        android:id="@+id/txtIVSA"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:hint="I.V.S.A."/>
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Vivos: "/>
+        android:text="Uso de Métodos Anticonceptivos: "/>
+
     <RadioGroup
-        android:id="@+id/rdGpHnos"
+        android:id="@+id/rdGpAntC"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/rdbHnos1"
+            android:id="@+id/rdbAntC1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Si"/>
 
         <RadioButton
-            android:id="@+id/rdbHnos2"
+            android:id="@+id/rdbAntC2"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="No"/>
     </RadioGroup>
-    <EditText
-        android:id="@+id/txtEnfHnos"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enfermedades que padecen"/>
 
     <EditText
-        android:id="@+id/txtOtros"
+        android:id="@+id/txtCuales"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="Otros"/>
+        android:hint="¿Cuáles?"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="(En éste apartado se integrará lo relacionado con el padecimiento actual que hace que el paciente acuda a nuestro hospital,
+es de mencionar que de cada uno de los síntomas se solicitará un desglose adecuado en base a calidad, cantidad, cronología, área,
+agravantes, atenuantes y acompañantes.) "/>
+
+    <EditText
+        android:id="@+id/txtPEEA"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="PEEA"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="(En este apartado se comentarán los datos negativos relevantes en relación a los síntomas cardinales que hicieron que el
+paciente acudiera a consulta, por ej.: Si un paciente acude a consulta por hematemesis preguntar sobre datos de síndrome dispéptico,
+reflujo gastro-esofágico, uso de antiinflamatorios no esteroideos.) "/>
+
+    <EditText
+        android:id="@+id/txtDNR"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="DNR"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="(Lo mismo que para datos negativos pero en este caso enfocados a datos positivos relacionados con la enfermedad, ej. Si el
+paciente acude por hematemesis preguntar sobre pérdida de peso, uso de AINES, etc.) "/>
+
+    <EditText
+        android:id="@+id/txtDPR"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="DPR"/>
+
+    <EditText
+        android:id="@+id/txtIPAS"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="I.P.A.S."/>
 
     <Button
         android:id="@+id/btnCancelar"
@@ -142,6 +150,7 @@
         />
 
         </LinearLayout>
+
     </ScrollView>
 
 </LinearLayout>

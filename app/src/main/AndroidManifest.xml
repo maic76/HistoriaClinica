@@ -9,6 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HistoriaClinica">
+        <activity android:name=".AntGinecoObstetricos">
+            <intent-filter>
+                <action android:name="mx.lania.usingintent.AntGinecoObstetricos" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".AntFamiliares">
             <intent-filter>
                 <action android:name="mx.lania.usingintent.AntFamiliares" />
