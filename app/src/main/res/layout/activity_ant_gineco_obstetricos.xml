@@ -50,8 +50,14 @@
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:hint="P"/>
+
+            <EditText
+                android:id="@+id/txtA"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:hint="A"/>
     <EditText
-        android:id="@+id/txtA"
+        android:id="@+id/txtC"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:hint="C"/>

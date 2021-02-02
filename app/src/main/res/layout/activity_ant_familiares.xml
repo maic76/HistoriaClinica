@@ -29,24 +29,24 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Padre vivo: "/>
-<RadioGroup
-    android:id="@+id/rdGpPadre"
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    <RadioGroup
+            android:id="@+id/rdGpPadre"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    <RadioButton
-        android:id="@+id/rdbPadre1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Si"/>
+            <RadioButton
+                android:id="@+id/rdbPadre1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Si"/>
 
-    <RadioButton
-        android:id="@+id/rdbPadre2"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="No"/>
-</RadioGroup>
+            <RadioButton
+                android:id="@+id/rdbPadre2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="No"/>
+    </RadioGroup>
 
     <EditText
         android:id="@+id/txtEnfPadre"

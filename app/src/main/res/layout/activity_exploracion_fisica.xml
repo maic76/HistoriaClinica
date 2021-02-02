@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android ="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:titleTextColor="@android:color/white"
+        app:title="Exploración Física"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text=" (IMC= Índice de Masa Corporal)(la Tensión arterial deberá de ser tomada en 2 posiciones ej.: acostado y sentado)"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Signos vitales: "/>
+
+            <EditText
+                android:id="@+id/txtTAD"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:hint="T.A. (Brazo der.)"/>
+            <EditText
+                android:id="@+id/txtTAI"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:hint="T.A. (Brazo izq.)"/>
+            <EditText
+                android:id="@+id/txtFC"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:hint="F.C."/>
+            <EditText
+                android:id="@+id/txtFrecR"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:hint="Frec. Resp."/>
+            <EditText
+                android:id="@+id/txtTemp"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:hint="Temp."/>
+            <EditText
+                android:id="@+id/txtPeso2"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:hint="Peso"/>
+            <EditText
+                android:id="@+id/txtTalla2"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:hint="Talla"/>
+            <EditText
+                android:id="@+id/txtIMC"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:hint="IMC"/>
+            <EditText
+                android:id="@+id/txtCabeza"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Cabeza y Cuello"/>
+            <EditText
+                android:id="@+id/txtTorax"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Tórax"/>
+            <EditText
+                android:id="@+id/txtAbdomen"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Abdomen"/>
+            <EditText
+                android:id="@+id/txtExtremidades"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Extremidades"/>
+            <EditText
+                android:id="@+id/txtNeurologico"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Neurológico y Estado Mental"/>
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancelar"
+                android:onClick="onClickCancelar" />
+
+            <Button
+                android:id="@+id/btnGuardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guardar"
+                android:onClick="onClickGuardar" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -57,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickExploracion(View v){
-        //Intent iFami = new Intent("mx.lania.usingintent.Exploracion");
-       // startActivityForResult(iFami,4);
+         Intent iExp = new Intent("mx.lania.usingintent.ExploracionFisica");
+        startActivityForResult(iExp,6);
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data){
@@ -101,6 +101,14 @@ public class MainActivity extends AppCompatActivity {
             }
             if(resultCode == RESULT_CANCELED){
                 showMessage("No guardaste los datos de Antecedentes Gineco-obstétricos");
+            }
+        }
+        if(requestCode==6){
+            if(resultCode == RESULT_OK){
+                showMessage("De vuelta al Menú desde Exploración Física");
+            }
+            if(resultCode == RESULT_CANCELED){
+                showMessage("No guardaste los datos de Exploración Física");
             }
         }
     }

@@ -66,26 +66,31 @@ public class AntGinecoObstetricos extends AppCompatActivity {
     public Bundle obtainValues(){
 
         Bundle extras = new Bundle();
-       /* String respPadreVivo,respMadreViva,respHnosVivos;
+        extras.putString("Menarquia",((EditText) findViewById(R.id.txtMenarquia)).getText().toString());
+        extras.putString("Ritmo",((EditText) findViewById(R.id.txtRitmo)).getText().toString());
+        extras.putString("F.U.M.",((EditText) findViewById(R.id.txtFUM)).getText().toString());
+        extras.putString("G",((EditText) findViewById(R.id.txtG)).getText().toString());
+        extras.putString("P",((EditText) findViewById(R.id.txtP)).getText().toString());
+        extras.putString("A",((EditText) findViewById(R.id.txtA)).getText().toString());
+        extras.putString("C",((EditText) findViewById(R.id.txtC)).getText().toString());
+        extras.putString("I.V.S.A.",((EditText) findViewById(R.id.txtIVSA)).getText().toString());
 
-        if( ((RadioButton) findViewById(R.id.rdbPadre1)).isChecked() ){
-            respPadreVivo = "SI";
-        }else if( ((RadioButton) findViewById(R.id.rdbPadre2)).isChecked() ){
-            respPadreVivo = "NO";
+        String anticonceptivos;
+
+        if( ((RadioButton) findViewById(R.id.rdbAntC1)).isChecked() ){
+            anticonceptivos = "SI";
+        }else if( ((RadioButton) findViewById(R.id.rdbAntC2)).isChecked() ){
+            anticonceptivos = "NO";
         }else{
-            respPadreVivo = "";
+            anticonceptivos = "";
         }
 
-
-
-        extras.putString("PadreVivo",respPadreVivo);
-        extras.putString("MadreViva",respMadreViva);
-        extras.putString("HermanosVivos",respHnosVivos);
-        extras.putString("Enfermedades_Padre",((EditText) findViewById(R.id.txtEnfPadre)).getText().toString());
-        extras.putString("Enfermedades_Madre",((EditText) findViewById(R.id.txtEnfMadre)).getText().toString());
-        extras.putString("Enfermedades_Hnos",((EditText) findViewById(R.id.txtEnfHnos)).getText().toString());
-        extras.putString("Num_Hnos",((EditText) findViewById(R.id.txtCuantos)).getText().toString());
-        extras.putString("Otros",((EditText) findViewById(R.id.txtOtros)).getText().toString());*/
+        extras.putString("UsoAnticonceptivos",anticonceptivos);
+        extras.putString("MetodosAnticonceptivos",((EditText) findViewById(R.id.txtCuales)).getText().toString());
+        extras.putString("PEEA",((EditText) findViewById(R.id.txtPEEA)).getText().toString());
+        extras.putString("DNR",((EditText) findViewById(R.id.txtDNR)).getText().toString());
+        extras.putString("DPR",((EditText) findViewById(R.id.txtDPR)).getText().toString());
+        extras.putString("I.P.A.S.",((EditText) findViewById(R.id.txtIPAS)).getText().toString());
 
         return extras;
     }
