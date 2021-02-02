@@ -54,6 +54,9 @@ public class Dialogo extends DialogFragment {
                                     case 3:
                                         ((AntNoPatologicos) getActivity()).doPositiveClick("Datos Almacenados");
                                         break;
+                                    case 4:
+                                        ((AntFamiliares) getActivity()).doPositiveClick("Datos Almacenados");
+                                        break;
                                     default:
                                         Toast.makeText(getContext(),"Respuesta generica",Toast.LENGTH_SHORT).show();
                                         break;
@@ -73,6 +76,9 @@ public class Dialogo extends DialogFragment {
                                         break;
                                     case 3:
                                         ((AntNoPatologicos) getActivity()).doNegativeClick("Sigue capturando");
+                                        break;
+                                    case 4:
+                                        ((AntFamiliares) getActivity()).doNegativeClick("Sigue capturando");
                                         break;
                                     default:
                                         Toast.makeText(getContext(),"Respuesta generica cancelar",Toast.LENGTH_SHORT).show();

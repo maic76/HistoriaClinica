@@ -12,7 +12,7 @@
         android:minHeight="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         app:titleTextColor="@android:color/white"
-        app:title="Antecedentes Patológicos"/>
+        app:title="Antecedentes No Patológicos"/>
 
     <TextView
         android:layout_width="fill_parent"

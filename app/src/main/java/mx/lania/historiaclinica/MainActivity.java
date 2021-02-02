@@ -46,6 +46,11 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(iNoPato,3);
     }
 
+    public void onClickFamiliares(View v){
+        Intent iFami = new Intent("mx.lania.usingintent.AntFamiliares");
+        startActivityForResult(iFami,4);
+    }
+
     public void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==1){
@@ -70,6 +75,14 @@ public class MainActivity extends AppCompatActivity {
             }
             if(resultCode == RESULT_CANCELED){
                 showMessage("No guardaste los datos de Antecedentes No Patológicos");
+            }
+        }
+        if(requestCode==4){
+            if(resultCode == RESULT_OK){
+                showMessage("De vuelta al Menú desde Antecedentes Familiares");
+            }
+            if(resultCode == RESULT_CANCELED){
+                showMessage("No guardaste los datos de Antecedentes Familiares");
             }
         }
     }

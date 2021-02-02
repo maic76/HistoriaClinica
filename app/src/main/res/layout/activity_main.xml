@@ -39,7 +39,8 @@
         android:layout_width="160dp"
         android:text="Antecedentes Familiares"
         android:layout_height="wrap_content"
-        android:layout_weight="4"/>
+        android:layout_weight="4"
+        android:onClick="onClickFamiliares"/>
 
     <Button
         android:layout_width="160dp"
