@@ -14,98 +14,155 @@
         app:titleTextColor="@android:color/white"
         app:title="Ficha de Identificación"/>
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Ficha de identificacion"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/txtNombre"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nombre"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/txtApellido"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:hint="Apellidos"/>
+            <EditText
+                android:id="@+id/txtNombre"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                android:padding="20dp"
+                android:layout_margin="10dp"/>
 
-    <EditText
-        android:id="@+id/txtCurp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:hint="CURP"/>
+            <EditText
+                android:id="@+id/txtApellido"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Apellidos"
+                android:padding="20dp"
+                android:layout_margin="10dp"/>
 
-    <RadioGroup
-        android:id="@+id/rdGp1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+            <EditText
+                android:id="@+id/txtCurp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="CURP"
+                android:padding="20dp"
+                android:layout_margin="10dp"/>
+            <RadioGroup
+                android:id="@+id/rdGp1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sexo: "/>
 
-        <RadioButton
-            android:id="@+id/rdb1"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Masculino"/>
+                <RadioButton
+                    android:id="@+id/rdb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Masculino"/>
 
-        <RadioButton
-            android:id="@+id/rdb2"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Femenino"/>
-    </RadioGroup>
+                <RadioButton
+                    android:id="@+id/rdb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Femenino"/>
+            </RadioGroup>
 
-    <EditText
-        android:id="@+id/txtEdad"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:hint="Edad"/>
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
 
-    <EditText
-        android:id="@+id/txtPeso"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:hint="Peso"/>
+                   >
+                    <TableRow >
 
-    <EditText
-        android:id="@+id/txtTalla"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:hint="Talla"/>
+                        <EditText
+                            android:id="@+id/txtEdad"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Edad"
+                            android:padding="10dp"
+                            android:layout_margin="10dp"/>
 
-    <EditText
-        android:id="@+id/txtAltura"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:hint="Altura"/>
+                        <EditText
+                            android:id="@+id/txtPeso"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Peso"
+                            android:padding="10dp"
+                            android:layout_margin="10dp"/>
 
-    <EditText
-        android:id="@+id/txtOcupacion"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ocupación"/>
+                    </TableRow>
 
-    <EditText
-        android:id="@+id/txtMotivo"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:hint="Motivo de consulta"/>
+                    <TableRow >
+                        <EditText
+                            android:id="@+id/txtTalla"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Talla"
+                            android:padding="10dp"
+                            android:layout_margin="10dp"
 
-    <Button
-        android:id="@+id/btnCancelar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cancelar"
-        android:onClick="onClickCancelar"
-        />
-    <Button
-        android:id="@+id/btnGuardar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Guardar"
-        android:onClick="onClickGuardar"
-        />
+                           />
+
+                        <EditText
+                            android:id="@+id/txtAltura"
+                            android:layout_width="130dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Altura"
+                            android:padding="10dp"
+                            android:layout_margin="10dp"
+                            />
+                    </TableRow>
+                </TableLayout>
+
+            <EditText
+                android:id="@+id/txtOcupacion"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ocupación"
+                android:padding="20dp"
+                android:layout_margin="10dp"/>
+
+            <EditText
+                android:id="@+id/txtMotivo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Motivo de consulta"
+                android:padding="20dp"
+                android:layout_margin="10dp"/>
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_gravity="center">
+              <Button
+                  android:id="@+id/btnCancelar"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Cancelar"
+                  android:layout_margin="20dp"
+                  android:onClick="onClickCancelar"
+
+                  />
+
+              <Button
+                  android:id="@+id/btnGuardar"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Guardar"
+                  android:layout_margin="20dp"
+
+                  android:onClick="onClickGuardar" />
+          </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
 
 
 </LinearLayout>

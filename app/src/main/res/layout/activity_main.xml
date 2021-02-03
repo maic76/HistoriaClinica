@@ -12,49 +12,72 @@
         android:minHeight="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         app:titleTextColor="@android:color/white"
-        app:title="Historia Clínica"/>
+        app:title="Historia Clínica"
+       />
 
-    <Button
-        android:layout_width="160dp"
-        android:text="Ficha de Identificación"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:onClick="onClickFicha"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical">
 
-    <Button
-        android:layout_width="160dp"
-        android:text="Antecedentes Patológicos"
-        android:layout_height="wrap_content"
-        android:layout_weight="2"
-        android:onClick="onClickPato"/>
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
 
-    <Button
-        android:layout_width="160dp"
-        android:text="Antecedentes No Patológicos"
-        android:layout_height="wrap_content"
-        android:layout_weight="3"
-        android:onClick="onClickNoPato"/>
+            <Button
+                android:layout_width="match_parent"
+                android:text="Ficha de Identificación"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:onClick="onClickFicha"/>
 
-    <Button
-        android:layout_width="160dp"
-        android:text="Antecedentes Familiares"
-        android:layout_height="wrap_content"
-        android:layout_weight="4"
-        android:onClick="onClickFamiliares"/>
+            <Button
+                android:layout_width="fill_parent"
+                android:text="Antecedentes Patológicos"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:onClick="onClickPato"/>
 
-    <Button
-        android:layout_width="160dp"
-        android:text="Antecedentes Gineco-obstétricos"
-        android:layout_height="wrap_content"
-        android:layout_weight="5"
-        android:onClick="onClickGinecoObste"/>
+            <Button
+                android:layout_width="fill_parent"
+                android:text="Antecedentes No Patológicos"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:onClick="onClickNoPato"/>
 
-    <Button
-        android:layout_width="160dp"
-        android:text="Exploración física"
-        android:layout_height="wrap_content"
-        android:layout_weight="6"
-        android:onClick="onClickExploracion"/>
+            <Button
+                android:layout_width="fill_parent"
+                android:text="Antecedentes Familiares"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:onClick="onClickFamiliares"/>
 
+            <Button
+                android:layout_width="fill_parent"
+                android:text="Antecedentes Gineco-obstétricos"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:onClick="onClickGinecoObste"/>
+
+            <Button
+                android:layout_width="fill_parent"
+                android:text="Exploración física"
+                android:layout_height="70dp"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:onClick="onClickExploracion"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
     </LinearLayout>

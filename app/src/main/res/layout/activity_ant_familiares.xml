@@ -19,119 +19,146 @@
         android:layout_height="fill_parent" >
 
         <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:focusable="true"
-            android:focusableInTouchMode="true" >
+            android:focusableInTouchMode="true"
+            android:layout_margin="10dp">
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Padre vivo: "/>
+
     <RadioGroup
             android:id="@+id/rdGpPadre"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_gravity="center" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Padre vivo: "/>
 
             <RadioButton
                 android:id="@+id/rdbPadre1"
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Si"/>
 
             <RadioButton
                 android:id="@+id/rdbPadre2"
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="No"/>
     </RadioGroup>
 
     <EditText
         android:id="@+id/txtEnfPadre"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enfermedades que padece"/>
+        android:hint="Enfermedades que padece"
+        android:padding="20dp"
+        android:layout_margin="10dp"/>
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Madre viva: "/>
     <RadioGroup
         android:id="@+id/rdGpMadre"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Madre viva: "/>
 
         <RadioButton
             android:id="@+id/rdbMadre1"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Si"/>
 
         <RadioButton
             android:id="@+id/rdbMadre2"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="No"/>
+
     </RadioGroup>
 
     <EditText
         android:id="@+id/txtEnfMadre"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="Enfermedades que padece"/>
+        android:hint="Enfermedades que padece"
+        android:padding="20dp"
+        android:layout_margin="10dp"/>
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Hermanos: "/>
-    <EditText
-        android:id="@+id/txtCuantos"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:hint="¿Cuántos?"/>
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Vivos: "/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Hermanos: "/>
+
     <RadioGroup
         android:id="@+id/rdGpHnos"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+        <EditText
+            android:id="@+id/txtCuantos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="No. de Hnos."
+            android:layout_margin="15dp"
+            android:padding="20dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vivos: "
+            android:layout_margin="0dp"/>
 
         <RadioButton
             android:id="@+id/rdbHnos1"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Si"/>
+            android:text="Si"
+            android:layout_margin="0dp"/>
 
         <RadioButton
             android:id="@+id/rdbHnos2"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No"/>
+            android:text="No"
+            android:layout_margin="0dp"/>
     </RadioGroup>
     <EditText
         android:id="@+id/txtEnfHnos"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="Enfermedades que padecen"/>
+        android:hint="Enfermedades que padecen"
+        android:padding="20dp"
+        android:layout_margin="10dp"
+        />
 
     <EditText
         android:id="@+id/txtOtros"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="Otros"/>
+        android:hint="Otros"
+        android:padding="20dp"
+        android:layout_margin="10dp"/>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
     <Button
         android:id="@+id/btnCancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Cancelar"
         android:onClick="onClickCancelar"
+        android:layout_margin="20dp"
         />
     <Button
         android:id="@+id/btnGuardar"
@@ -139,8 +166,9 @@
         android:layout_height="wrap_content"
         android:text="Guardar"
         android:onClick="onClickGuardar"
+        android:layout_margin="20dp"
         />
-
+        </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==1){
             if(resultCode == RESULT_OK){
-                showMessage("De vuelta al Menú desde Ficha");
+                showMessage("Datos Almacenados de Ficha de Identificación");
             }
             if(resultCode == RESULT_CANCELED){
                 showMessage("No guardaste los datos de Ficha de Identificación");
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         }
         if(requestCode==2){
             if(resultCode == RESULT_OK){
-                showMessage("De vuelta al Menú desde Antecedentes Patológicos");
+                showMessage("Datos Almacenados de Antecedentes Patológicos");
             }
             if(resultCode == RESULT_CANCELED){
                 showMessage("No guardaste los datos de Antecedentes Patológicos");
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         }
         if(requestCode==3){
             if(resultCode == RESULT_OK){
-                showMessage("De vuelta al Menú desde Antecedentes No Patológicos");
+                showMessage("Datos Almacenados de Antecedentes No Patológicos");
             }
             if(resultCode == RESULT_CANCELED){
                 showMessage("No guardaste los datos de Antecedentes No Patológicos");
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         }
         if(requestCode==4){
             if(resultCode == RESULT_OK){
-                showMessage("De vuelta al Menú desde Antecedentes Familiares");
+                showMessage("Datos Almacenados de Antecedentes Familiares");
             }
             if(resultCode == RESULT_CANCELED){
                 showMessage("No guardaste los datos de Antecedentes Familiares");
@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         }
         if(requestCode==5){
             if(resultCode == RESULT_OK){
-                showMessage("De vuelta al Menú desde Antecedentes Gineco-obstétricos");
+                showMessage("Datos Almacenados de Antecedentes Gineco-obstétricos");
             }
             if(resultCode == RESULT_CANCELED){
                 showMessage("No guardaste los datos de Antecedentes Gineco-obstétricos");
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
         }
         if(requestCode==6){
             if(resultCode == RESULT_OK){
-                showMessage("De vuelta al Menú desde Exploración Física");
+                showMessage("Datos Almacenados de Exploración Física");
             }
             if(resultCode == RESULT_CANCELED){
                 showMessage("No guardaste los datos de Exploración Física");
