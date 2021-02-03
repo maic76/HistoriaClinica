@@ -144,8 +144,15 @@ public class FichaId extends AppCompatActivity {
                                                 if( ((EditText)  findViewById(R.id.txtMotivo)).getText().toString().isEmpty() ){
                                                     showMessage("El campo Motivo de consulta está vacío");
                                                 }else{
-                                                    showMessage("Validación OK");
-                                                    return true;
+                                                    RadioButton rb1 = (RadioButton) findViewById(R.id.rdb1);
+                                                    RadioButton rb2 = (RadioButton) findViewById(R.id.rdb2);
+                                                    if( !rb1.isChecked() && !rb2.isChecked() ){
+                                                        showMessage("Debe elegir Masculino ó Femenino");
+                                                    }else{
+                                                        showMessage("Validación OK");
+                                                        return true;
+                                                    }
+
                                                 }
                                             }
 

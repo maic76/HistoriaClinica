@@ -43,14 +43,7 @@
             android:layout_gravity="center"
             android:layout_margin="10dp">
 
-            <EditText
-                android:id="@+id/txtTAD"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:hint="T.A.(Brazo der.)"
-                android:layout_margin="10dp"
 
-               />
             <EditText
                 android:id="@+id/txtTAI"
                 android:layout_width="wrap_content"
@@ -59,13 +52,23 @@
                 android:layout_margin="10dp"
                />
             <EditText
+                android:id="@+id/txtTAD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="T.A.(Brazo der.)"
+                android:layout_margin="10dp"
+
+                />
+
+        </LinearLayout>
+            <EditText
                 android:id="@+id/txtFC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Frec.Card."
+                android:hint="Frec. Cardiaca"
                 android:layout_margin="10dp"
-             />
-        </LinearLayout>
+                android:layout_gravity="center"
+                />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
